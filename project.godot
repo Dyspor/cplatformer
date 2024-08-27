@@ -11,6 +11,9 @@ config_version=5
 [application]
 
 config/name="Waste Runner"
+config/description="Waste Runner is a small platformer game made by:
+Gerrit Haegebaeumer [Programmer]
+Devid \"Zhenya\" Dondorf [Artist]"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Data/Project/CP-LogoWasteRunnerIcon.png"
