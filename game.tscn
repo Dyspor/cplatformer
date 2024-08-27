@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddsjhyoweemvi"]
+[gd_scene load_steps=6 format=3 uid="uid://dwb4ixrhkt8bx"]
 
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_dwad5"]
 [ext_resource type="PackedScene" uid="uid://bct5tnrbfg6ao" path="res://Prefabs/DefaultGround.tscn" id="4_8wsyk"]
-[ext_resource type="SpriteFrames" uid="uid://ddcbffrkomnhi" path="res://Assets/Player/player_sprite_animation.tres" id="5_fyppi"]
+[ext_resource type="SpriteFrames" uid="uid://eujds0yugf1j" path="res://Assets/Player/player_sprite_animation.tres" id="5_fyppi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
 size = Vector2(15, 44)
