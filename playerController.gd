@@ -3,10 +3,18 @@ extends CharacterBody2D
 
 @export var gravity: float = 200.0
 @export var jump_force: float = 200.0
-@export var move_speed: float = 5
+@export var start_move_speed: float = 300.0
+@export var add_speed_per_second: float = 50.0
+
+var move_speed: float
+
+func _ready() -> void:
+	move_speed = start_move_speed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	move_speed += delta * add_speed_per_second
+	
 	velocity.y += delta * gravity
 	
 	velocity.x = move_speed
@@ -20,6 +28,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = 0
 	
 	move_and_slide()
+
 
 
 func is_grounded() -> bool:

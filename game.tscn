@@ -14,8 +14,9 @@ size = Vector2(128.327, 20)
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(0, -66)
 script = ExtResource("1_igih7")
-jump_force = 300.0
-move_speed = 300.0
+gravity = 500.0
+jump_force = 500.0
+add_speed_per_second = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_io54n")
@@ -27,8 +28,8 @@ debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 texture = ExtResource("1_2ypar")
 
 [node name="Ground" type="Node2D" parent="."]
-position = Vector2(516, 144)
-scale = Vector2(10.52, 1)
+position = Vector2(3036, 112)
+scale = Vector2(50, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 texture = ExtResource("1_2ypar")
