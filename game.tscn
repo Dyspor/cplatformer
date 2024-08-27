@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwb4ixrhkt8bx"]
+[gd_scene load_steps=11 format=3 uid="uid://dwb4ixrhkt8bx"]
 
 [ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="1_2ypar"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
+[ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_dwad5"]
 [ext_resource type="Texture2D" uid="uid://btn6v5tqjr758" path="res://Assets/Player/CP-Player.png" id="2_ichee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
@@ -61,10 +62,26 @@ debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 offset = Vector2(100, 0)
 zoom = Vector2(3, 3)
 
+[node name="Label-ScoreTXT" type="Label" parent="Player/Camera2D"]
+texture_filter = 1
+offset_left = -89.0
+offset_top = -104.0
+offset_right = -40.0
+offset_bottom = -89.0
+theme_override_fonts/font = ExtResource("2_dwad5")
+text = "Meters:"
+
+[node name="LabelScoreNumb" type="Label" parent="Player/Camera2D"]
+offset_left = -30.0
+offset_top = -104.0
+offset_right = 87.0
+offset_bottom = -89.0
+theme_override_fonts/font = ExtResource("2_dwad5")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_au0rt")
 autoplay = "default"
-frame_progress = 0.0766016
+frame_progress = 0.610031
 
 [node name="Ground" type="Node2D" parent="."]
 position = Vector2(3036, 50)
