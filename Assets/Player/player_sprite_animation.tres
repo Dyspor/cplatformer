@@ -2,10 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://btn6v5tqjr758" path="res://Assets/Player/CP-Player.png" id="1_kylqa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_goip3"]
-atlas = ExtResource("1_kylqa")
-region = Rect2(0, 0, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_awmw8"]
 atlas = ExtResource("1_kylqa")
 region = Rect2(0, 64, 64, 64)
@@ -14,12 +10,13 @@ region = Rect2(0, 64, 64, 64)
 atlas = ExtResource("1_kylqa")
 region = Rect2(0, 128, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_goip3"]
+atlas = ExtResource("1_kylqa")
+region = Rect2(0, 0, 64, 64)
+
 [resource]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_goip3")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_awmw8")
 }, {
@@ -28,6 +25,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_awmw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goip3")
 }],
 "loop": true,
 "name": &"move",

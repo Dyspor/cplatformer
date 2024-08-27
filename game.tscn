@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_dwad5"]
-[ext_resource type="PackedScene" uid="uid://bct5tnrbfg6ao" path="res://Prefabs/DefaultGround.tscn" id="4_8wsyk"]
+[ext_resource type="Script" path="res://ground_spawner.gd" id="4_580er"]
 [ext_resource type="SpriteFrames" uid="uid://ddcbffrkomnhi" path="res://Assets/Player/player_sprite_animation.tres" id="5_fyppi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
@@ -11,11 +11,12 @@ size = Vector2(15, 44)
 [node name="Game" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(19, -112)
+position = Vector2(19, -167)
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_igih7")
 gravity = 250.0
-jump_force = 150.0
-start_move_speed = 100.0
+jump_force = 250.0
+start_move_speed = 175.0
 add_speed_per_second = 2.5
 min_jump_time = 0.1
 
@@ -56,4 +57,5 @@ position = Vector2(0, -22)
 shape = SubResource("RectangleShape2D_io54n")
 debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 
-[node name="Ground" parent="." instance=ExtResource("4_8wsyk")]
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("4_580er")
