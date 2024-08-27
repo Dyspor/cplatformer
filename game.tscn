@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwb4ixrhkt8bx"]
+[gd_scene load_steps=10 format=3 uid="uid://ddsjhyoweemvi"]
 
 [ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="1_2ypar"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
 [ext_resource type="Texture2D" uid="uid://btn6v5tqjr758" path="res://Assets/Player/CP-Player.png" id="2_ichee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
-size = Vector2(128, 128)
+size = Vector2(15, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otjsn"]
 atlas = ExtResource("2_ichee")
@@ -44,22 +44,26 @@ size = Vector2(128.327, 20)
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(0, -66)
 script = ExtResource("1_igih7")
-gravity = 500.0
-jump_force = 500.0
-add_speed_per_second = 20.0
+gravity = 250.0
+jump_force = 150.0
+start_move_speed = 100.0
+add_speed_per_second = 2.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-8.5, 10)
 shape = SubResource("RectangleShape2D_io54n")
 debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(100, 0)
+zoom = Vector2(3, 3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_au0rt")
-frame_progress = 0.59547
+frame_progress = 0.586064
 
 [node name="Ground" type="Node2D" parent="."]
-position = Vector2(3036, 112)
+position = Vector2(3036, 50)
 scale = Vector2(50, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
