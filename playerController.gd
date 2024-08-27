@@ -6,16 +6,22 @@ extends CharacterBody2D
 @export var start_move_speed: float = 300.0
 @export var add_speed_per_second: float = 50.0
 @export var min_jump_time: float = 0.2
+@export var point_modifier: float = 100
 
 var move_speed: float
 var jump_release_buffer: bool = false;
 var jump_timer: float = 0
+var point_label: Label
+var points: float = 0
 
 func _ready() -> void:
 	move_speed = start_move_speed
+	point_label = get_node("Camera2D/LabelScoreNumb")
 
 # Called every frame. 'delta' s the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	points += (move_speed * delta) / point_modifier
+	point_label.text = str(int(points))
 	move_speed += delta * add_speed_per_second
 	jump_timer += delta
 	
