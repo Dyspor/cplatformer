@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5il3fdcj0t70"]
+
+[ext_resource type="PackedScene" uid="uid://bct5tnrbfg6ao" path="res://Prefabs/BuildingSmall.tscn" id="1_e7f4b"]
+[ext_resource type="Texture2D" uid="uid://b6p1oakfcyyul" path="res://Assets/Building/CP-Bldg_High.png" id="2_l8mad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjpao"]
+size = Vector2(192, 49)
+
+[node name="BigBuilding" instance=ExtResource("1_e7f4b")]
+
+[node name="Sprite2D2" parent="StaticBody2D" index="0"]
+texture = ExtResource("2_l8mad")
+flip_h = true
+
+[node name="Sprite2D3" parent="StaticBody2D" index="1"]
+texture = ExtResource("2_l8mad")
+
+[node name="Sprite2D" parent="StaticBody2D" index="2"]
+texture = ExtResource("2_l8mad")
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="3"]
+position = Vector2(96, -24.5)
+shape = SubResource("RectangleShape2D_vjpao")

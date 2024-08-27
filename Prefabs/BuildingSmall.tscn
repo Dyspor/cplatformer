@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bct5tnrbfg6ao"]
+
+[ext_resource type="Texture2D" uid="uid://hh82as2upxng" path="res://Assets/Building/CP-Bldg_Low.png" id="1_67073"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbqcs"]
+size = Vector2(192, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qasxo"]
+size = Vector2(14, 161)
+
+[node name="SmallBuilding" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+z_index = -5
+position = Vector2(64, 0)
+texture = ExtResource("1_67073")
+offset = Vector2(32, -32)
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D"]
+z_index = -5
+position = Vector2(128, 0)
+texture = ExtResource("1_67073")
+offset = Vector2(32, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+z_index = -5
+texture = ExtResource("1_67073")
+offset = Vector2(32, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(96, -10.5)
+shape = SubResource("RectangleShape2D_lbqcs")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.25, -59.75)
+shape = SubResource("RectangleShape2D_qasxo")
+debug_color = Color(0, 0.640533, 0.348452, 0.42)

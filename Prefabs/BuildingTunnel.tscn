@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://7dt3p1bn6r0o"]
+
+[ext_resource type="PackedScene" uid="uid://bct5tnrbfg6ao" path="res://Prefabs/BuildingSmall.tscn" id="1_e6ykg"]
+[ext_resource type="Texture2D" uid="uid://x6jukc4w44vy" path="res://Assets/Building/CP-Bldg_Corridor.png" id="2_ylmlo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bb6sy"]
+size = Vector2(192.25, 22)
+
+[node name="TunnelBuilding" instance=ExtResource("1_e6ykg")]
+
+[node name="Sprite2D2" parent="StaticBody2D" index="0"]
+texture = ExtResource("2_ylmlo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+position = Vector2(96.125, -53)
+shape = SubResource("RectangleShape2D_bb6sy")
+
+[node name="Sprite2D3" parent="StaticBody2D" index="2"]
+texture = ExtResource("2_ylmlo")
+
+[node name="Sprite2D" parent="StaticBody2D" index="3"]
+texture = ExtResource("2_ylmlo")
