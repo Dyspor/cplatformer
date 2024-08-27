@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddsjhyoweemvi"]
+[gd_scene load_steps=7 format=3 uid="uid://ddsjhyoweemvi"]
 
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_dwad5"]
@@ -8,11 +8,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
 size = Vector2(15, 44)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_clva3"]
+
 [node name="Game" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(19, -167)
 scale = Vector2(0.75, 0.75)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_igih7")
 gravity = 250.0
 jump_force = 250.0
@@ -59,3 +63,13 @@ debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("4_580er")
+
+[node name="DeathZone" type="Area2D" parent="."]
+position = Vector2(0, -12)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+shape = SubResource("WorldBoundaryShape2D_clva3")
+
+[connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]
