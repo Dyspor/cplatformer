@@ -47,3 +47,6 @@ func _physics_process(delta: float) -> void:
 
 func is_grounded() -> bool:
 	return move_and_collide(Vector2(0,5), true) != null
+
+func _on_death_zone_body_entered(_body: Node2D) -> void:
+	get_tree().call_deferred("change_scene_to_file", "res://Data/Menus/GameOver/game_over.tscn")

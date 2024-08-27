@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://74spolhvqfi"]
+[gd_scene load_steps=4 format=3 uid="uid://ddodj13773o8m"]
 
-[ext_resource type="Texture2D" uid="uid://ci85jegm453bv" path="res://Data/Menus/GameOver/GameOverScreen.png" id="1_kjn1a"]
-[ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_isqox"]
+[ext_resource type="Texture2D" uid="uid://ci85jegm453bv" path="res://Data/Menus/GameOver/GameOverScreen.png" id="1_nb8nv"]
+[ext_resource type="Script" path="res://start_game.gd" id="1_qmr75"]
+[ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_jnkac"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qmr75")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
