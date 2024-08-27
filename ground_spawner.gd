@@ -23,12 +23,12 @@ func _ready() -> void:
 	
 	spawn_next(null)
 	
-func spawn_next(body) -> void:
+func spawn_next(_body) -> void:
 	var type: PackedScene = buildings[randi() % buildings.size()]
 	
 	var next_building: Node = type.instantiate()
 	next_building.position = Vector2(last_spawn, 0)
-	add_child(next_building)
+	call_deferred("add_child", next_building)
 	
 	var area: Area2D = next_building.get_child(1)
 	area.body_entered.connect(spawn_next)
