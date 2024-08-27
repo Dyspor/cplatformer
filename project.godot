@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="CPlatformer"
+config/name="Waste Runner"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Data/Project/CP-LogoWasteRunnerIcon.png"
 
 [rendering]
 
