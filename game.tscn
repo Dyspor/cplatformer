@@ -1,67 +1,59 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwb4ixrhkt8bx"]
+[gd_scene load_steps=6 format=3 uid="uid://ddsjhyoweemvi"]
 
-[ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="1_2ypar"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_dwad5"]
-[ext_resource type="SpriteFrames" uid="uid://dek7c1lkvtt4x" path="res://Assets/Player/PlayerSprite.RES.res" id="3_tvuoo"]
+[ext_resource type="PackedScene" uid="uid://bct5tnrbfg6ao" path="res://Prefabs/DefaultGround.tscn" id="4_8wsyk"]
+[ext_resource type="SpriteFrames" uid="uid://ddcbffrkomnhi" path="res://Assets/Player/player_sprite_animation.tres" id="5_fyppi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
-size = Vector2(15, 42)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct3ii"]
-size = Vector2(128.327, 20)
+size = Vector2(15, 44)
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(0, -66)
+position = Vector2(19, -112)
 script = ExtResource("1_igih7")
 gravity = 250.0
 jump_force = 150.0
-start_move_speed = 200.0
+start_move_speed = 100.0
 add_speed_per_second = 2.5
 min_jump_time = 0.1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-8.5, 10)
-shape = SubResource("RectangleShape2D_io54n")
-debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
-
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(100, 0)
+position = Vector2(100, -50)
 zoom = Vector2(3, 3)
+limit_left = -100
+limit_bottom = 0
 
 [node name="Label-ScoreTXT" type="Label" parent="Player/Camera2D"]
 texture_filter = 1
-offset_left = -89.0
-offset_top = -104.0
-offset_right = -40.0
-offset_bottom = -89.0
+offset_left = -187.0
+offset_top = -103.0
+offset_right = -131.0
+offset_bottom = -88.0
 theme_override_fonts/font = ExtResource("2_dwad5")
 text = "Meters:"
 
 [node name="LabelScoreNumb" type="Label" parent="Player/Camera2D"]
-offset_left = -30.0
-offset_top = -104.0
-offset_right = 87.0
-offset_bottom = -89.0
+offset_left = -128.0
+offset_top = -103.0
+offset_right = -11.0
+offset_bottom = -88.0
 theme_override_fonts/font = ExtResource("2_dwad5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-sprite_frames = ExtResource("3_tvuoo")
-autoplay = "default"
-frame_progress = 0.610031
+position = Vector2(0, -64)
+sprite_frames = ExtResource("5_fyppi")
+animation = &"move"
+autoplay = "move"
+frame = 1
+frame_progress = 0.31442
+centered = false
+offset = Vector2(-25, 0)
 
-[node name="Ground" type="Node2D" parent="."]
-position = Vector2(3036, 50)
-scale = Vector2(50, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_io54n")
+debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground"]
-texture = ExtResource("1_2ypar")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D"]
-position = Vector2(0.0950599, 0)
-scale = Vector2(1, 6.32)
-shape = SubResource("RectangleShape2D_ct3ii")
+[node name="Ground" parent="." instance=ExtResource("4_8wsyk")]

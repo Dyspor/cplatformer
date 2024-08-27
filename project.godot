@@ -15,6 +15,12 @@ run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Data/Project/CP-LogoWasteRunnerIcon.png"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/Building/": "red"
+}
+
 [input]
 
 Jump={
