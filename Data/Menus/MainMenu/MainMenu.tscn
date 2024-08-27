@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bth81vty78n4i"]
+
+[ext_resource type="Texture2D" uid="uid://ct4kf1rhlupkl" path="res://Data/Menus/MainMenu/MainMenu.png" id="1_gvy0u"]
+[ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_lkuw1"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("1_gvy0u")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 432.0
+offset_right = 884.0
+offset_bottom = 481.0
+theme_override_colors/font_color = Color(0.956863, 0.898039, 0.701961, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("2_lkuw1")
+theme_override_font_sizes/font_size = 50
+text = "Press any key to START"
