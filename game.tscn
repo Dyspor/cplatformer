@@ -32,18 +32,18 @@ limit_bottom = 0
 
 [node name="Label-ScoreTXT" type="Label" parent="Player/Camera2D"]
 texture_filter = 1
-offset_left = -187.0
-offset_top = -103.0
-offset_right = -131.0
-offset_bottom = -88.0
+offset_left = -244.0
+offset_top = -159.333
+offset_right = -188.0
+offset_bottom = -144.333
 theme_override_fonts/font = ExtResource("2_dwad5")
 text = "Meters:"
 
 [node name="LabelScoreNumb" type="Label" parent="Player/Camera2D"]
-offset_left = -128.0
-offset_top = -103.0
-offset_right = -11.0
-offset_bottom = -88.0
+offset_left = -176.0
+offset_top = -159.333
+offset_right = -59.0
+offset_bottom = -144.333
 theme_override_fonts/font = ExtResource("2_dwad5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
