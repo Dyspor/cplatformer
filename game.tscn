@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://dwb4ixrhkt8bx"]
+[gd_scene load_steps=5 format=3 uid="uid://ddsjhyoweemvi"]
+
+[ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="1_2ypar"]
+[ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct3ii"]
+size = Vector2(128.327, 20)
 
 [node name="Game" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(0, -66)
+script = ExtResource("1_igih7")
+jump_force = 300.0
+move_speed = 300.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_io54n")
+debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_2ypar")
+
+[node name="Ground" type="Node2D" parent="."]
+position = Vector2(516, 144)
+scale = Vector2(10.52, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+texture = ExtResource("1_2ypar")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D"]
+position = Vector2(0.0950599, 0)
+scale = Vector2(1, 6.32)
+shape = SubResource("RectangleShape2D_ct3ii")
