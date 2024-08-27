@@ -1,10 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddsjhyoweemvi"]
+[gd_scene load_steps=10 format=3 uid="uid://dwb4ixrhkt8bx"]
 
 [ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="1_2ypar"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
+[ext_resource type="Texture2D" uid="uid://btn6v5tqjr758" path="res://Assets/Player/CP-Player.png" id="2_ichee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
 size = Vector2(128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otjsn"]
+atlas = ExtResource("2_ichee")
+region = Rect2(1, 0, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5yoi"]
+atlas = ExtResource("2_ichee")
+region = Rect2(1, 64, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqsbh"]
+atlas = ExtResource("2_ichee")
+region = Rect2(1, 128, 63, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_au0rt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otjsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5yoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqsbh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct3ii"]
 size = Vector2(128.327, 20)
@@ -24,8 +54,9 @@ debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_2ypar")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_au0rt")
+frame_progress = 0.59547
 
 [node name="Ground" type="Node2D" parent="."]
 position = Vector2(3036, 112)
