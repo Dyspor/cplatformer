@@ -52,6 +52,7 @@ gravity = 250.0
 jump_force = 150.0
 start_move_speed = 100.0
 add_speed_per_second = 2.5
+min_jump_time = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-8.5, 10)
