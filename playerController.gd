@@ -50,5 +50,5 @@ func is_grounded() -> bool:
 
 func _on_death_zone_body_entered(_body: Node2D) -> void:
 	get_tree().call_deferred("change_scene_to_file", "res://Data/Menus/GameOver/game_over.tscn")
-	var score: Label = get_tree().current_scene.get_child(3)
-	score.text = str(points)
+	#var score: Label = get_tree().current_scene.get_child(3)
+	#score.text = str(points)
