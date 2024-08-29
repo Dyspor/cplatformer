@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddodj13773o8m"]
+[gd_scene load_steps=5 format=3 uid="uid://ddodj13773o8m"]
 
 [ext_resource type="Texture2D" uid="uid://ci85jegm453bv" path="res://Data/Menus/GameOver/GameOverScreen.png" id="1_nb8nv"]
 [ext_resource type="Script" path="res://start_game.gd" id="1_qmr75"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_jnkac"]
+[ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="4_5gsga"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -56,3 +57,18 @@ theme_override_colors/font_color = Color(0.368214, 0.750804, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_jnkac")
 theme_override_font_sizes/font_size = 75
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 15
+position = Vector2(-102, -403)
+scale = Vector2(5.1464, 3.21917)
+texture_normal = ExtResource("4_5gsga")
+passby_press = true
+action = "Jump"
+visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="TouchScreenButton"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bth81vty78n4i"]
+[gd_scene load_steps=5 format=3 uid="uid://bth81vty78n4i"]
 
 [ext_resource type="Script" path="res://start_game.gd" id="1_0cwvc"]
 [ext_resource type="Texture2D" uid="uid://ct4kf1rhlupkl" path="res://Data/Menus/MainMenu/MainMenu.png" id="1_gvy0u"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_lkuw1"]
+[ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="4_j7sl1"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -38,3 +39,18 @@ theme_override_constants/shadow_outline_size = 7
 theme_override_fonts/font = ExtResource("2_lkuw1")
 theme_override_font_sizes/font_size = 50
 text = "Press any key to START"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 15
+position = Vector2(-102, -403)
+scale = Vector2(5.1464, 3.21917)
+texture_normal = ExtResource("4_j7sl1")
+passby_press = true
+action = "Jump"
+visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="TouchScreenButton"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0
