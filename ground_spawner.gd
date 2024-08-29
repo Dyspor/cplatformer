@@ -4,7 +4,7 @@ extends Node2D
 const small_building: PackedScene = preload("res://Prefabs/BuildingSmall.tscn")
 const medium_building: PackedScene = preload("res://Prefabs/BuildingMedium.tscn")
 const big_building: PackedScene = preload("res://Prefabs/BuildingBig.tscn")
-const tunnel_building: PackedScene = preload("res://Prefabs/BuildingTunnel.tscn")
+#const tunnel_building: PackedScene = preload("res://Prefabs/BuildingTunnel.tscn")
 
 @export var platform_gap: float = 900.0
 
@@ -14,7 +14,7 @@ var buildings: Array
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	buildings = [small_building, medium_building, big_building, tunnel_building]
+	buildings = [small_building, medium_building, big_building,]
 	
 	var start_building: Node = medium_building.instantiate()
 	start_building.position = Vector2(last_spawn, 0)

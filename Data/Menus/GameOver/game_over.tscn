@@ -22,10 +22,10 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 556.0
-offset_top = 733.0
-offset_right = 1359.0
-offset_bottom = 800.0
+offset_left = 578.0
+offset_top = 676.0
+offset_right = 1381.0
+offset_bottom = 743.0
 theme_override_constants/shadow_offset_y = 60
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 60
@@ -35,9 +35,9 @@ text = "Press any key to RESTART"
 
 [node name="ScoreTXT" type="Label" parent="."]
 layout_mode = 0
-offset_left = 347.0
+offset_left = 658.0
 offset_top = 568.0
-offset_right = 653.0
+offset_right = 964.0
 offset_bottom = 641.0
 theme_override_colors/font_color = Color(0.835779, 0.782283, 0.557748, 1)
 theme_override_constants/outline_size = 10
@@ -48,9 +48,9 @@ text = "You ran:"
 
 [node name="ScoreNumb" type="Label" parent="."]
 layout_mode = 0
-offset_left = 690.0
+offset_left = 1001.0
 offset_top = 574.0
-offset_right = 1404.0
+offset_right = 1715.0
 offset_bottom = 647.0
 theme_override_colors/font_color = Color(0.368214, 0.750804, 0, 1)
 theme_override_constants/outline_size = 10

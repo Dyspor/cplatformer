@@ -1,9 +1,163 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddsjhyoweemvi"]
+[gd_scene load_steps=32 format=3 uid="uid://ddsjhyoweemvi"]
 
+[ext_resource type="Texture2D" uid="uid://cm7p4u2eux0ug" path="res://Assets/Animated_Clutter/BG/BG-Statc.png" id="1_c8d26"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
+[ext_resource type="Texture2D" uid="uid://dq4my8431yy16" path="res://Assets/Animated_Clutter/BG/BGLight.png" id="2_73d1f"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_dwad5"]
+[ext_resource type="Texture2D" uid="uid://dwhqayt51bhet" path="res://Assets/Animated_Clutter/BG/BgndBldgMid.png" id="3_kgf1u"]
 [ext_resource type="Script" path="res://ground_spawner.gd" id="4_580er"]
-[ext_resource type="SpriteFrames" uid="uid://ddcbffrkomnhi" path="res://Assets/Player/player_sprite_animation.tres" id="5_fyppi"]
+[ext_resource type="Texture2D" uid="uid://lexrqaj84sr2" path="res://Assets/Animated_Clutter/BG/BgndBldgVore.png" id="4_a430f"]
+[ext_resource type="Texture2D" uid="uid://bpn63oroxdxvr" path="res://Assets/Player/Char.png" id="7_vays5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dky2t"]
+atlas = ExtResource("1_c8d26")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evc23"]
+atlas = ExtResource("1_c8d26")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdp12"]
+atlas = ExtResource("1_c8d26")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulb4u"]
+atlas = ExtResource("1_c8d26")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnnb4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dky2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evc23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdp12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulb4u")
+}],
+"loop": true,
+"name": &"BG-StaticNoise",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf3no"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 0, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iby4w"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 64, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khsus"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 128, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bltci"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 192, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mahx"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 256, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od8w3"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 320, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dr3x"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 384, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05iit"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 448, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6h7h"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 512, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbd3n"]
+atlas = ExtResource("2_73d1f")
+region = Rect2(0, 576, 64, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o77o8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf3no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iby4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khsus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bltci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mahx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od8w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dr3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05iit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6h7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbd3n")
+}],
+"loop": true,
+"name": &"Lights",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mof0n"]
+atlas = ExtResource("7_vays5")
+region = Rect2(0, 0, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u1i2"]
+atlas = ExtResource("7_vays5")
+region = Rect2(0, 64, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lpbf"]
+atlas = ExtResource("7_vays5")
+region = Rect2(0, 128, 64, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryy0k"]
+atlas = ExtResource("7_vays5")
+region = Rect2(0, 192, 64, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ud2di"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mof0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u1i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lpbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryy0k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_io54n"]
 size = Vector2(15, 44)
@@ -11,6 +165,61 @@ size = Vector2(15, 44)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_clva3"]
 
 [node name="Game" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Static" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(222, -98)
+motion_scale = Vector2(0, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/Static"]
+modulate = Color(0.752174, 0.793477, 0.70119, 1)
+position = Vector2(318, 353)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_bnnb4")
+animation = &"BG-StaticNoise"
+autoplay = "BG-StaticNoise"
+
+[node name="Light" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(1, 1, 1, 0.278431)
+texture_filter = 1
+position = Vector2(401, -218)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/Light"]
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_o77o8")
+animation = &"Lights"
+autoplay = "Lights"
+frame = 6
+frame_progress = 0.45539
+
+[node name="BLDgMid2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-16, -196)
+motion_mirroring = Vector2(850, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BLDgMid2"]
+modulate = Color(0.791999, 0.791999, 0.791999, 1)
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("3_kgf1u")
+
+[node name="BLDgMid" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(53, -172)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BLDgMid"]
+modulate = Color(0.470074, 0.470077, 0.470075, 1)
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("3_kgf1u")
+
+[node name="BldgVor" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(20, -137)
+motion_mirroring = Vector2(950, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BldgVor"]
+modulate = Color(0.497474, 0.497474, 0.497474, 1)
+scale = Vector2(5, 5)
+texture = ExtResource("4_a430f")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(19, -167)
@@ -20,12 +229,12 @@ collision_mask = 3
 script = ExtResource("1_igih7")
 gravity = 250.0
 jump_force = 250.0
-start_move_speed = 225.0
-add_speed_per_second = 5.0
+start_move_speed = 100.0
+add_speed_per_second = 15.0
 min_jump_time = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(100, -50)
+position = Vector2(158.667, -49.3333)
 zoom = Vector2(3, 3)
 limit_left = -100
 limit_bottom = 0
@@ -47,12 +256,11 @@ offset_bottom = -144.333
 theme_override_fonts/font = ExtResource("2_dwad5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+modulate = Color(0.729412, 1, 1, 1)
+self_modulate = Color(1, 0.877831, 0.596266, 1)
 position = Vector2(0, -64)
-sprite_frames = ExtResource("5_fyppi")
-animation = &"move"
-autoplay = "move"
-frame = 1
-frame_progress = 0.31442
+sprite_frames = SubResource("SpriteFrames_ud2di")
+autoplay = "default"
 centered = false
 offset = Vector2(-25, 0)
 
@@ -62,6 +270,7 @@ shape = SubResource("RectangleShape2D_io54n")
 debug_color = Color(0.828229, 0.00150534, 0.949095, 0.42)
 
 [node name="Spawner" type="Node2D" parent="."]
+z_index = 2
 script = ExtResource("4_580er")
 
 [node name="DeathZone" type="Area2D" parent="."]
