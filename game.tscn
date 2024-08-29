@@ -281,4 +281,15 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 shape = SubResource("WorldBoundaryShape2D_clva3")
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(-120, -399)
+scale = Vector2(17.08, 9.88)
+action = "Jump"
+visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="TouchScreenButton"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]

@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		if is_grounded():
 			velocity.y = -jump_force
 			jump_timer = 0
+	#if Input.is_action_just_pressed("")
 	
 	if Input.is_action_just_released("Jump") || jump_release_buffer:
 		if velocity.y < 0:
