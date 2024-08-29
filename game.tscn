@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ddsjhyoweemvi"]
+[gd_scene load_steps=33 format=3 uid="uid://ddsjhyoweemvi"]
 
 [ext_resource type="Texture2D" uid="uid://cm7p4u2eux0ug" path="res://Assets/Animated_Clutter/BG/BG-Statc.png" id="1_c8d26"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
@@ -164,6 +164,8 @@ size = Vector2(15, 44)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_clva3"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_26j8p"]
+
 [node name="Game" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -282,8 +284,11 @@ collision_mask = 2
 shape = SubResource("WorldBoundaryShape2D_clva3")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+z_index = 15
 position = Vector2(-120, -399)
 scale = Vector2(17.08, 9.88)
+texture_normal = SubResource("CanvasTexture_26j8p")
+passby_press = true
 action = "Jump"
 visibility_mode = 1
 
