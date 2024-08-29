@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ddsjhyoweemvi"]
+[gd_scene load_steps=34 format=3 uid="uid://ddsjhyoweemvi"]
 
 [ext_resource type="Texture2D" uid="uid://cm7p4u2eux0ug" path="res://Assets/Animated_Clutter/BG/BG-Statc.png" id="1_c8d26"]
 [ext_resource type="Script" path="res://playerController.gd" id="1_igih7"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://ground_spawner.gd" id="4_580er"]
 [ext_resource type="Texture2D" uid="uid://lexrqaj84sr2" path="res://Assets/Animated_Clutter/BG/BgndBldgVore.png" id="4_a430f"]
 [ext_resource type="Texture2D" uid="uid://bpn63oroxdxvr" path="res://Assets/Player/Char.png" id="7_vays5"]
+[ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="9_0xa0q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dky2t"]
 atlas = ExtResource("1_c8d26")
@@ -164,7 +165,8 @@ size = Vector2(15, 44)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_clva3"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_26j8p"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_gr2da"]
+specular_color = Color(1, 0, 1, 1)
 
 [node name="Game" type="Node2D"]
 
@@ -284,10 +286,12 @@ collision_mask = 2
 shape = SubResource("WorldBoundaryShape2D_clva3")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0.247059)
 z_index = 15
-position = Vector2(-120, -399)
-scale = Vector2(17.08, 9.88)
-texture_normal = SubResource("CanvasTexture_26j8p")
+position = Vector2(-102, -403)
+scale = Vector2(5.1464, 3.21917)
+texture_normal = ExtResource("9_0xa0q")
+texture_pressed = SubResource("CanvasTexture_gr2da")
 passby_press = true
 action = "Jump"
 visibility_mode = 1
