@@ -5,24 +5,16 @@
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_jnkac"]
 [ext_resource type="Texture2D" uid="uid://b8nk6e4dhuwkm" path="res://icon.svg" id="4_5gsga"]
 
-[node name="GameOver" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameOver" type="Node2D"]
 script = ExtResource("1_qmr75")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
 offset_right = 1149.0
 offset_bottom = 645.0
 texture = ExtResource("1_nb8nv")
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
 offset_left = 578.0
 offset_top = 676.0
 offset_right = 1381.0
@@ -32,10 +24,9 @@ theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 60
 theme_override_fonts/font = ExtResource("2_jnkac")
 theme_override_font_sizes/font_size = 60
-text = "Press any key to RESTART"
+text = "Touch Screen to RESTART"
 
 [node name="ScoreTXT" type="Label" parent="."]
-layout_mode = 0
 offset_left = 658.0
 offset_top = 568.0
 offset_right = 964.0
@@ -48,7 +39,6 @@ theme_override_font_sizes/font_size = 75
 text = "You ran:"
 
 [node name="ScoreNumb" type="Label" parent="."]
-layout_mode = 0
 offset_left = 1001.0
 offset_top = 574.0
 offset_right = 1715.0
@@ -58,17 +48,15 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_jnkac")
 theme_override_font_sizes/font_size = 75
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(959, 537)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Camera2D"]
 modulate = Color(1, 1, 1, 0)
-z_index = 15
-position = Vector2(-102, -403)
-scale = Vector2(5.1464, 3.21917)
+z_index = 1
+position = Vector2(-963, -540)
+scale = Vector2(15.0969, 8.38794)
 texture_normal = ExtResource("4_5gsga")
 passby_press = true
 action = "Jump"
 visibility_mode = 1
-
-[node name="Panel" type="Panel" parent="TouchScreenButton"]
-modulate = Color(1, 1, 1, 0)
-offset_right = 40.0
-offset_bottom = 40.0

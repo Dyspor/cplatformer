@@ -232,7 +232,7 @@ gravity = 250.0
 jump_force = 250.0
 start_move_speed = 100.0
 add_speed_per_second = 15.0
-min_jump_time = 0.1
+min_jump_time = 4.5
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(158.667, -49.3333)
@@ -255,6 +255,21 @@ offset_top = -159.333
 offset_right = -59.0
 offset_bottom = -144.333
 theme_override_fonts/font = ExtResource("2_dwad5")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Player/Camera2D"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(-853.334, -570.667)
+scale = Vector2(14.7583, 8.56171)
+texture_normal = ExtResource("9_0xa0q")
+passby_press = true
+action = "Jump"
+visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="Player/Camera2D/TouchScreenButton"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 modulate = Color(0.729412, 1, 1, 1)
@@ -281,20 +296,5 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 shape = SubResource("WorldBoundaryShape2D_clva3")
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-modulate = Color(1, 1, 1, 0)
-z_index = 15
-position = Vector2(-102, -403)
-scale = Vector2(5.1464, 3.21917)
-texture_normal = ExtResource("9_0xa0q")
-passby_press = true
-action = "Jump"
-visibility_mode = 1
-
-[node name="Panel" type="Panel" parent="TouchScreenButton"]
-modulate = Color(1, 1, 1, 0)
-offset_right = 40.0
-offset_bottom = 40.0
 
 [connection signal="body_entered" from="DeathZone" to="Player" method="_on_death_zone_body_entered"]
