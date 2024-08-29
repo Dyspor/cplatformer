@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddodj13773o8m"]
+[gd_scene load_steps=5 format=3 uid="uid://ddodj13773o8m"]
 
 [ext_resource type="Texture2D" uid="uid://ci85jegm453bv" path="res://Data/Menus/GameOver/GameOverScreen.png" id="1_nb8nv"]
 [ext_resource type="Script" path="res://start_game.gd" id="1_qmr75"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_jnkac"]
+[ext_resource type="Texture2D" uid="uid://cbarx041fiihj" path="res://Assets/Player/plcbtn.png" id="4_26cgd"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_qmr75")
@@ -53,8 +54,10 @@ position = Vector2(959, 537)
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Camera2D"]
 modulate = Color(1, 1, 1, 0)
 z_index = 1
-position = Vector2(-963, -540)
-scale = Vector2(15.0969, 8.38794)
+position = Vector2(-1024, -642)
+scale = Vector2(34.451, 21.1708)
+texture_normal = ExtResource("4_26cgd")
+texture_pressed = ExtResource("4_26cgd")
 action = "Jump"
 visibility_mode = 1
 

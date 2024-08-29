@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bth81vty78n4i"]
+[gd_scene load_steps=5 format=3 uid="uid://bth81vty78n4i"]
 
 [ext_resource type="Script" path="res://start_game.gd" id="1_0cwvc"]
 [ext_resource type="Texture2D" uid="uid://ct4kf1rhlupkl" path="res://Data/Menus/MainMenu/MainMenu.png" id="1_gvy0u"]
 [ext_resource type="FontFile" uid="uid://cxwi84spn5e1k" path="res://Data/Font/chintzy.ttf" id="2_lkuw1"]
+[ext_resource type="Texture2D" uid="uid://cbarx041fiihj" path="res://Assets/Player/plcbtn.png" id="4_utivj"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_0cwvc")
@@ -29,10 +30,12 @@ theme_override_font_sizes/font_size = 50
 text = "Touch the Screen to START"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-modulate = Color(1, 1, 1, 0)
 z_index = 1
 position = Vector2(-220, -183)
-scale = Vector2(20.2986, 11.7812)
+scale = Vector2(37.9008, 22.4194)
+texture_normal = ExtResource("4_utivj")
+texture_pressed = ExtResource("4_utivj")
 action = "Jump"
+visibility_mode = 1
 
 [connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
