@@ -228,11 +228,11 @@ scale = Vector2(0.75, 0.75)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_igih7")
-gravity = 250.0
-jump_force = 250.0
+gravity = 300.0
+jump_force = 230.0
 start_move_speed = 100.0
 add_speed_per_second = 15.0
-min_jump_time = 4.5
+min_jump_time = 3.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(158.667, -49.3333)
